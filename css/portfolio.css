@@ -1,3 +1,28 @@
+body {
+	font-family: "Roboto", sans-serif;
+	color: #2d3c49;		/* Our base darker font from mockup */
+	font-weight: 400;
+}
+
+a {
+	color: #2d3c49;		/* Leave anchor tags as default color, before click to match mockup */
+}
+
+.thick-line {
+	color: #7d97ad;
+	background-color: #7d97ad;
+	border: 0;
+	height: 4px;		/* For HR increased height to match mockup */
+}
+
+.text-lighter {
+	color: #7d97ad;		/* Lighter text color from the mockup */
+}
+
+.text-thin {
+	font-weight: 100;
+}
+
 .navbar-inverse .navbar-brand {
 	color: #e6f9ff;
 }
@@ -8,14 +33,33 @@
 }
 
 .navbar-inverse .navbar-nav >.active > a, .navbar-inverse .navbar-nav >.active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
-	background: #02b3e4;
+	background: #02b3e4; /* Our Light Blue from mockup, same as Udacity's Logo */
 }
 
-.navbar-brand > img {
-	padding-bottom: 25%;
+#udacity_logo {
+	width: 105px;
+	height: 85px;
+	margin-top: 25px;
 }
 
-#featured_images > div > img {
+#name_title_header > h1 {
+	font-size: 56px;
+}
+
+#name_title_header > h3 {
+	margin-top: 0px;
+}
+
+.featured-title {
+	padding-left: 10px;
+	font-size: 36px;
+}
+
+.app-text {
+	font-size: 30px;
+}
+
+#featured_work > div > img {
 	border-style: solid;
 	border-width: 1px;
 	border-color: #013b4c;

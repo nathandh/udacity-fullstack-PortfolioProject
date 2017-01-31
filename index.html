@@ -7,6 +7,9 @@
 		<!-- Bootstrap specific meta tags above -->
 		<title>Nathan's Udacity Portfolio Site</title>
 
+		<!-- Roboto font from fonts.google.com -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
+
 		<!-- Bootstrap inclusion -->
 		<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -19,6 +22,12 @@
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
+
+		<!-- jQuery inclusion for Bootstrap dependencies -->
+		<script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+		<!-- Bootstrap Plugins and Site-Specific javascript files -->
+		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	</head>
 	<body>
 	
@@ -43,7 +52,7 @@
 					</ul>
 					<!-- Right side navbar -->
 					<ul class="nav navbar-nav navbar-right">
-						<li><!--Spaceholder--></li>
+						<li><!--Empty Spaceholder--></li>
 					</ul>
 				</div><!--/ End Navbar -->
 			</div><!--/ End Container -->
@@ -53,17 +62,17 @@
 		<!-- Bootstrap Container for Top Page Head Content -->
 		<div class="container">
 			<div class="row">
-				<div id=udacity_logo" class="col-md-6 col-xs-2">
-					<img src="images/udacity_logo.svg" alt="Udacity Logo" height="95" width="75">
+				<div class="col-lg-6 col-md-4 col-sm-4 col-xs-12">
+					<img id="udacity_logo" src="images/udacity_logo.svg" alt="Udacity Logo">
 				</div>
-				<div id="name_title_header" class="col-md-6 col-xs-10 text-right text-uppercase">
-					<h1>Nathan D. Hernandez</h1>
+				<div id="name_title_header" class="col-lg-6 col-md-8 col-sm-8 col-xs-12 text-right text-uppercase">
+					<h1 class="text-thin">Nathan Hernandez</h1>
 					<h3>Full-Stack Developer</h3>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<hr>
+					<hr class="thick-line">
 				</div>
 			</div>
 			<div class="row">
@@ -73,33 +82,96 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<h2>Featured Work</h2>
+					<h2 class="text-lighter featured-title">Featured Work</h2>
 				</div>
 			</div>
-			<div id="featured_images" class="row">
+			<div id="featured_work" class="row text-center">
 				<div class="col-md-4 col-sm-4 col-xs-12">
-					<img class="img-responsive" src="images/FreshTomatoes_Logo.png" alt="FreshTomatoes App Logo">
-					<h3 class="text-uppercase">Fresh Tomatoes</h3>
-					<p>https://github.com/nathandh/udacity-fullstack-MovieTrailerWebsite</p>
+					<img class="img-responsive" src="images/FreshTomatoes_Logo.png" alt="FreshTomatoes App Logo" 
+						data-toggle="modal" data-target="#freshTomatoes">
+					<h3 class="text-uppercase app-text">Fresh Tomatoes!</h3>
+					<p><a href="https://github.com/nathandh/udacity-fullstack-MovieTrailerWebsite" target="_blank">
+						https://gitbhub.com/nathandh/udacity-fullstack-MovieTrailerWebsite</a></p>
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-12">
-					<img class="img-responsive" src="images/ProjectPortfolio_web.png" alt="Project Portfolio Logo">
-					<h3 class="text-uppercase">Project Portfolio</h3>
-					<p>https://github.com/nathandh/udacity-fullstack-PortfolioProject</p>
+					<img class="img-responsive" src="images/ProjectPortfolio_web.png" alt="Portfolio Project Logo" 
+						data-toggle="modal" data-target="#portfolioProject">
+					<h3 class="text-uppercase app-text">Portfolio Project</h3>
+					<p><a href="https://github.com/nathandh/udacity-fullstack-PortfolioProject" target="_blank">
+						https://github.com/nathandh/udacity-fullstack-PortfolioProject</a></p>
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-12">
-					<img class="img-responsive" src="images/code-1839406_1920.jpg" alt="Default Project App Logo">
-					<h3 class="text-uppercase">TBD Project</h3>
-					<p>https://github/com/nathandh/</p>
+					<img class="img-responsive" src="images/code-1839406_1920.jpg" alt="Default Project App Logo" 
+						data-toggle="modal" data-target="#tbdProject">
+					<h3 class="text-uppercase app-text">TBD Project</h3>
+					<p><a href="https://github.com/nathandh/" target="_blank">
+						https://github.com/nathandh</a></p>
+				</div>
+			</div>
+		</div> <!--/ End Main Container -->
+
+		<!-- MovieTrailerWebsite Project Modal -->
+		<div class="modal fade" id="freshTomatoes" tabindex="-1" role="dialog" 
+			aria-labelledby="freshTomatoesLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="freshTomatoesLabel">Fresh Tomatoes! Movie Trailers</h4>
+					</div>
+					<div class="modal-body">
+						<img class="img-responsive" src="images/FreshTomatoes_Logo.png">
+						<p>Movie Trailer Website project as part of Udacity's Full-Stack Web Developer Nanodegree. 
+							Udacity Project #1. Utilizes TheMovieDB public API</p>
+
+						<p>Tomato Image taken from Free stock image found at: 
+							<a href="http://nobacks.com/tomato-seventy-eight/" target="_blank">
+							http://nobacks.com/tomato-seventy-eight</a>. Courtesy of noBacks.com</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Portfolio Project Modal -->
+		<div class="modal fade" id="portfolioProject" tabindex="-1" role="dialog" 
+			aria-labelledby="portfolioProjectLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="portfolioProjectLabel">Portfolio Project Site</h4>
+					</div>
+					<div class="modal-body">
+						<img class="img-responsive" src="images/ProjectPortfolio_web.png">
+						<p>Portfolio Project for Udacity's Full-Stack Nanodegree program. 
+							Showcases entire course projects upon their completion.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- jQuery inclusion for Bootstrap dependencies -->
-		<script src="node_modules/jquery/dist/jquery.min.js"></script>
-
-		<!-- Bootstrap Plugins and Site-Specific javascript files -->
-		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<!-- TBD Project Modal -->
+		<div class="modal fade" id="tbdProject" tabindex="-1" role="dialog" 
+			aria-labelledby="tbdProjectLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="tbdProjectLabel">TBD Project</h4>
+					</div>
+					<div class="modal-body">
+						<img class="img-responsive" src="images/code-1839406_1920.jpg">
+						<p>TBD Project Placeholder. Will be replaced with next project in
+							the series, for completion of Udacity's Full-Stack Nanodegree program.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
-
 </html>
