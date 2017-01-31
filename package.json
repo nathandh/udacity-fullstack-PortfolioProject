@@ -1,0 +1,24 @@
+{
+  "name": "udacity_portfolio_project",
+  "version": "0.0.1",
+  "description": "Portfolio Project for Udacity Nanodegree",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathandh/udacity-fullstack-PortfolioProject.git"
+  },
+  "author": "Nathan D. Hernandez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nathandh/udacity-fullstack-PortfolioProject/issues"
+  },
+  "homepage": "https://github.com/nathandh/udacity-fullstack-PortfolioProject#readme",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "grunt-cli": "^1.2.0",
+    "jquery": "^3.1.1"
+  }
+}

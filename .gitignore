@@ -1,2 +1,3 @@
 # Ignore site folder log files specific to webserver (e.g. nginx)
 logs/
+node_modules/
