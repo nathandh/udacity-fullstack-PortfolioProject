@@ -64,3 +64,19 @@ a {
 	border-width: 1px;
 	border-color: #013b4c;
 }
+
+@media (max-width: 767px) {		/* For XS devices, adjust layout of logo */
+	#udacity_logo {
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+
+	#name_title_header h1 {
+		font-size: 48px;		/* Reduce our name and title size for smaller displays */
+	}
+
+	#name_title_header h1,h3 {
+		text-align: center;
+	}
+}
